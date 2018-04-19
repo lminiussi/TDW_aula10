@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Formulario Contato</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Formulario de Contato: </h2>
+            <div>
+                Nome: <h:inputText value="#{formContato.nome}" required="true" requiredMessage="Preencha o campo Nome"/><br/>
+                Email: <h:inputText value="#{formContato.email}" required="true" requiredMessage="Preencha o campo Email"/><br/>
+                Titulo: <h:inputText value="#{formContato.titulo}" required="true" requiredMessage="Preencha o campo Titulo"/><br/>
+                Mensagem: <br />
+                <h:inputTextarea value="#{formContato.mensagem}" required="true" requiredMessage="Preencha o Mensagem"/>
+            </div>
+            
+            <p><h:commandButton value="Grava" action="#{formContato.enviaContato}"/></p>
+        </h:form>
+        
+        <table>
+            <tr>
+                <td>Nome: </td>
+                <td><h:outputText value="#{formContato.nome}"/></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><h:outputText value="#{formContato.email}"/></td>
+            </tr>
+            <tr>
+                <td>Titulo: </td>
+                <td><h:outputText value="#{formContato.titulo}"/></td>
+            </tr>
+            <tr>
+                <td>Mensagem: </td>
+                <td><h:outputText value="#{formContato.mensagem}"/></td>
+            </tr>
+        </table>
+    </h:body>
+</html>
+
