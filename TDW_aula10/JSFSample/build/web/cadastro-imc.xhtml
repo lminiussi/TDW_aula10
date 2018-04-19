@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>TODO supply a title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <h2>Cadastro IMC </h2>
+        <div>
+            Nome: <h:inputText value="#{indiceDeMassaCorporal.nome}" required="true" requiredMessage="Preencha o campo Nome"/> <br/>
+            Email: <h:inputText value="#{indiceDeMassaCorporal.email}" required="true" requiredMessage="Preencha o campo Email"/><br/>
+            Peso: <h:inputText value="#{indiceDeMassaCorporal.peso}" required="true" requiredMessage="Preencha o campo Peso"/><br/>
+            Altura: <h:inputText value="#{indiceDeMassaCorporal.altura}" required="true" requiredMessage="Preencha o campo Altura"/><br/>
+            
+            <p><h:commandButton value="Grava" action="#{indiceDeMassaCorporal.calculaIMC}"/></p>
+        </div>
+        </h:form>
+        
+        <table>
+            <tr>
+                <td>Nome: </td>
+                <td><h:outputText value="#{indiceDeMassaCorporal.nome}"/></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><h:outputText value="#{indiceDeMassaCorporal.email}"/></td>
+            </tr>
+            <tr>
+                <td>IMC: </td>
+                <td><h:outputText value="#{indiceDeMassaCorporal.imc}"/></td>
+            </tr>
+        </table>
+    </h:body>
+</html>

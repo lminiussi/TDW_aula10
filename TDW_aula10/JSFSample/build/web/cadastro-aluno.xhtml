@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Cadastro Aluno</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Cadastro Aluno: </h2>
+            <div>
+                Nome: <h:inputText value="#{aluno.nome}" required="true" requiredMessage="Preencha o campo Nome"/><br/>
+                Sobrenome: <h:inputText value="#{aluno.sobrenome}" required="true" requiredMessage="Preencha o campo Nome"/><br/>
+                Email: <h:inputText value="#{aluno.email}" required="true" requiredMessage="Preencha o campo Email"/><br/>
+                RA: <h:inputText value="#{aluno.ra}" required="true" requiredMessage="Preencha o campo Titulo"/><br/>
+                Curso <h:inputText value="#{aluno.curso}" required="true" requiredMessage="Preencha o campo Titulo"/><br/>
+                CPF: <h:inputText value="#{aluno.cpf}" required="true" requiredMessage="Preencha o campo Titulo"/><br/>
+                RG: <h:inputText value="#{aluno.rg}" required="true" requiredMessage="Preencha o campo Titulo"/>
+            </div>
+            
+            <p><h:commandButton value="Grava" action="#{aluno.cadastroAluno}"/></p>
+        </h:form>
+        
+        <table>
+            <tr>
+                <td>Nome: </td>
+                <td><h:outputText value="#{aluno.nome}"/></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><h:outputText value="#{aluno.sobrenome}"/></td>
+            </tr>
+            <tr>
+                <td>RA: </td>
+                <td><h:outputText value="#{aluno.ra}"/></td>
+            </tr>
+            <tr>
+                <td>Curso: </td>
+                <td><h:outputText value="#{aluno.curso}"/></td>
+            </tr>
+            <tr>
+                <td>CPF: </td>
+                <td><h:outputText value="#{aluno.cpf}"/></td>
+            </tr>
+            <tr>
+                <td>RG: </td>
+                <td><h:outputText value="#{aluno.rg}"/></td>
+            </tr>
+        </table>
+    </h:body>
+</html>
+
